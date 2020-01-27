@@ -1,6 +1,7 @@
 var randNum = Math.round((Math.random() * 100) + 1);
 var counter= 0;
-
+var img1 = document.createElement("img");
+img1.src = "";
 
 function sendData(form) {
     var guessNum = form.inputbox.value;
@@ -8,7 +9,7 @@ function sendData(form) {
     counter += 1;
 
 if (randNum == guessNum) {
-    document.getElementById("answer").innerText = "Congrats you won!! It took you " + counter + " guesses." 
+    document.getElementById("answer").innerText = "Congrats you won!! It took you " + counter + " guesses." + img1
 } else if (randNum > guessNum) {
     document.getElementById("answer").innerText = "Too Low, try again"
 } else if (randNum < guessNum) {
